@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "342925377983",
+    "firebase_url": "https://sandbox-bb33b.firebaseio.com",
+    "project_id": "sandbox-bb33b",
+    "storage_bucket": "sandbox-bb33b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342925377983:android:7188604d5974742c",
+        "android_client_info": {
+          "package_name": "hu.gabortoth.androidsandbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342925377983-r3l1t8u62ntn2j44ndv765bg42hgttn9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWtT3sg1CT_e87KPZJKS-t6GEAQUb1tEk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
