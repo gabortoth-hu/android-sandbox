@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d("qqq","test");
 
-
+        Date buildDate = new Date(BuildConfig.TIMESTAMP);
+        TextView buildTimeTextView = (TextView) findViewById(R.id.build_time);
+        buildTimeTextView.setText(buildDate.toString());
     }
 
     // In order for the system to match this method to
@@ -32,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.edit_message);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
+
+    public void openFragmentActivity(View view) {
+        Intent intent = new Intent(this, DisplayFragmentActivity.class);
         startActivity(intent);
     }
 }
