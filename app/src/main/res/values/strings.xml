@@ -2,4 +2,8 @@
     <string name="app_name">Android Sandbox</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_article_fragment">Hello article fragment</string>
+    <string name="hello_headlines_fragment">Hello headlines fragment</string>
 </resources>
