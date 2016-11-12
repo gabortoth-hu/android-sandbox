@@ -1,11 +1,14 @@
 package hu.gabortoth.androidsandbox;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Date;
@@ -43,5 +46,15 @@ public class MainActivity extends AppCompatActivity {
     public void openFragmentActivity(View view) {
         Intent intent = new Intent(this, DisplayFragmentActivity.class);
         startActivity(intent);
+    }
+
+    public void putAButtonDynamically(View view) {
+        Button button = new Button(this);
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.activity_main);
+        LinearLayout.LayoutParams layoutParam = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.0f);
+        button.setLayoutParams(layoutParam);
+        button.setText("added button");
+        linearLayout.addView(button);
     }
 }
