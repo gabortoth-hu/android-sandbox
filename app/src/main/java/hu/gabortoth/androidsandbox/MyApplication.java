@@ -1,17 +1,12 @@
 package hu.gabortoth.androidsandbox;
 
 import android.app.Application;
-import android.content.Intent;
 import android.util.Log;
 
 import com.google.firebase.FirebaseApp;
-import com.google.firebase.FirebaseOptions;
-//import com.google.firebase.database.FirebaseDatabase;
 
-//import com.google.firebase.messaging.FirebaseMessaging;
-//import com.google.firebase.messaging.FirebaseMessagingService;
-
-import hu.gabortoth.androidsandbox.fcm.MyFirebaseInstanceIdService;
+import hu.gabortoth.androidsandbox.helpers.FontsOverride;
+//import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
  * Created by gtoth on 2016.10.11..
@@ -22,6 +17,17 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        FontsOverride.setDefaultFont(this, "DEFAULT", "Raleway-Black.ttf");
+        FontsOverride.setDefaultFont(this, "MONOSPACE", "Raleway-Black.ttf");
+        FontsOverride.setDefaultFont(this, "SERIF", "Raleway-Regular.ttf");
+        FontsOverride.setDefaultFont(this, "SANS_SERIF", "Raleway-Black.ttf");
+
+        /*CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/Raleway-Regular.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
+        );*/
 
         //FirebaseApp.initializeApp(this, FirebaseOptions.fromResource(this));
         // ^ already exists
