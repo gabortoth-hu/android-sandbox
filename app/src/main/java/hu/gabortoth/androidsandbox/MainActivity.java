@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout.LayoutParams layoutParam = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.0f);
         button.setLayoutParams(layoutParam);
+        button.setBackground(getResources().getDrawable(R.drawable.custom_button));
         button.setText("added button");
         linearLayout.addView(button);
     }
